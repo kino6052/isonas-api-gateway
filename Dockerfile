@@ -14,7 +14,11 @@ RUN npm install
 EXPOSE 3000
 
 # Define environment variable
-ENV NAME World
+ENV PUREACCESS_IP 192.168.65.1
+ENV PUREACCESS_PORT 9080
+
+RUN sed -i -e "s/localhost/$PUREACCESS_IP/g" ./api/swagger.yaml
+RUN sed -i -e "s/9080/$PUREACCESS_PORT/g" ./api/swagger.yaml
 
 # Run index.js when the container launches
 CMD ["node", "index.js"]

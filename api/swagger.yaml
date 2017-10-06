@@ -19,7 +19,7 @@ paths:
     get:
       tags:
       - "users"
-      summary: "Get All Users"
+      summary: "Get All Users"  
       operationId: "usersGET"
       produces:
       - "application/json"
@@ -44,7 +44,7 @@ paths:
       x-apigateway-integration:
         hostname: "localhost"
         port: "9080"
-        path: "/getUsersAndImages"
+        path: "/api/getUsersAndImages"
         httpMethod: "GET"
         type: "https"
       x-swagger-router-controller: "Users"
