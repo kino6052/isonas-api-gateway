@@ -73,7 +73,8 @@ exports.usersGET = function() {
     examples['application/json'] = [
         {
             "id": 0,
-            "displayName": "string"
+            "firstName": "string",
+            "lastName": "string"
         }
     ];
     if (Object.keys(examples).length > 0) {

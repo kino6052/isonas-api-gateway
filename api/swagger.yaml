@@ -100,8 +100,13 @@ paths:
         description: "ID of user to update"
         required: true
         type: "string"
+      - name: "userId"
+        in: "body"
+        description: "ID of user to update"
+        required: true
+        type: "number"
       - in: "body"
-        name: "user"
+        name: "JsonPatch"
         description: "User Update Data"
         required: true
         schema:
@@ -127,8 +132,8 @@ paths:
         requestParameters: null
         hostname: "localhost"
         port: "9080"
-        path: "/saveUser"
-        httpMethod: "GET"
+        path: "/api/updateUser"
+        httpMethod: "POST"
         type: "https"
       x-swagger-router-controller: "Users"
 definitions:
@@ -171,7 +176,9 @@ definitions:
     properties:
       id:
         type: "integer"
-      displayName:
+      firstName:
+        type: "string"
+      lastName:
         type: "string"
   User:
     type: "object"
