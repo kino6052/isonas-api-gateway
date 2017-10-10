@@ -10,7 +10,7 @@ info:
   license:
     name: "Apache 2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-host: "localhost:9080"
+host: "172.31.120.96:9080"
 basePath: "/"
 schemes:
 - "https"
@@ -42,7 +42,7 @@ paths:
           schema:
             $ref: "#/definitions/Error"
       x-apigateway-integration:
-        hostname: "localhost"
+        hostname: "172.31.120.96"
         port: "9080"
         path: "/api/getUsersAndImages"
         httpMethod: "GET"
@@ -81,7 +81,7 @@ paths:
             $ref: "#/definitions/Error"
       x-apigateway-integration:
         requestParameters: null
-        hostname: "localhost"
+        hostname: "172.31.120.96"
         port: "9080"
         path: "/getUser"
         httpMethod: "GET"
@@ -100,11 +100,6 @@ paths:
         description: "ID of user to update"
         required: true
         type: "string"
-      - name: "userId"
-        in: "body"
-        description: "ID of user to update"
-        required: true
-        type: "number"
       - in: "body"
         name: "JsonPatch"
         description: "User Update Data"
@@ -130,7 +125,7 @@ paths:
             $ref: "#/definitions/Error"
       x-apigateway-integration:
         requestParameters: null
-        hostname: "localhost"
+        hostname: "172.31.120.96"
         port: "9080"
         path: "/api/updateUser"
         httpMethod: "POST"

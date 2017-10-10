@@ -196,7 +196,7 @@ class RequestContext {
         this.params                 = this.req.swagger.params;
         this.headers                = {
             'Content-Type': 'application/x-www-form-urlencoded',
-            'Cookie': 'username=api; utoken=manager;',
+            'Cookie': 'username=api@isonas.com; utoken=manager;',
         };
     }
 
