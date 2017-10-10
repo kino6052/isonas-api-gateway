@@ -14,7 +14,7 @@ RUN npm install
 EXPOSE 3000
 
 # Define environment variable
-ENV PUREACCESS_IP 192.168.65.1
+ENV PUREACCESS_IP 172.17.0.1
 ENV PUREACCESS_PORT 9080
 
 RUN sed -i -e "s/localhost/$PUREACCESS_IP/g" ./api/swagger.yaml
